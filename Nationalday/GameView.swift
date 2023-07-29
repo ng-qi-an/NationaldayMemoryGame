@@ -13,6 +13,7 @@ struct GameView: View {
         var image: String
         var name: String
     }
+    @State var randomness = 1
     @State var cards = [["lol", "hi", "another"], ["e", "hiz", "anothere"], ["lolz", "hil", "anothera"]]
     let columns = [
         GridItem(.adaptive(minimum: .infinity), alignment: .leading)
@@ -20,6 +21,7 @@ struct GameView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                     ForEach(cards, id: \.self){ row in
                         HStack {
@@ -28,6 +30,7 @@ struct GameView: View {
                                 Rectangle()
                                     .frame(width: 95, height: 120)
                                     .background(.gray)
+                                
                             }
                             Spacer()
                         }
@@ -46,13 +49,9 @@ struct GameView: View {
                     Button("Instructions") {
                         showInstructions  = true
                     }
-                    
-                    Button("Settings") {
-                        print("Pressed")
-                    }
                 }
             }
-            .navigationTitle("Memory game")
+            .navigationTitle("Collage???")
             .toolbarRole(.editor)
             .padding()
         }
