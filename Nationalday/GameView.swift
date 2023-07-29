@@ -13,7 +13,7 @@ struct GameView: View {
         var image: String
         var name: String
     }
-    @State var cards = [["lol", "hi", "another"]]
+    @State var cards = [["lol", "hi", "another"], ["e", "hiz", "anothere"], ["lolz", "hil", "anothera"]]
     let columns = [
         GridItem(.adaptive(minimum: .infinity), alignment: .leading)
     ]
